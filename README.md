@@ -25,3 +25,5 @@ Facebook CRE: [https://github.com/facebook/create-react-app](https://github.com/
 
 ### Additional links 
 https://medium.com/swlh/how-to-add-multiple-entry-points-to-your-react-app-ea8bc015d410
+
+https://uidesigndaily.com/

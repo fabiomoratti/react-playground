@@ -15,8 +15,16 @@ const UseStateCounter = () => {
 
         setTimeout(() => {
             console.log("setTimeout 1: " + value);
-            // ... because we are grabbing the value here and it has not increased yet
-            setValue(value + 1);
+
+            //https://reactjs.org/docs/hooks-reference.html#functional-updates
+            // This form is to be used if the new value depends on the previous one.
+            setValue((prevValue) => {
+                return prevValue + 1;
+            });
+
+            // alternate version
+            //setValue((prevValue) => prevValue + 1);
+
             console.log("setTimeout 2: " + value);
         }, 2000);
 

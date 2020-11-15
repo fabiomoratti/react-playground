@@ -4,12 +4,21 @@ import React, {useState, useEffect} from 'react';
 // second parameter
 const UseEffectBasics = () => {
     const [value, setValue] = useState(0);
+
+    // gets called only when value changes (value is in the deps array)
     useEffect(() => {
-        console.log('call useEffect');
-        if (value >= 1) {
-            document.title = `New Messages - ${value}`;
-        }
-    });
+            console.log('call useEffect');
+            if (value >= 1) {
+                document.title = `New Messages - ${value}`;
+            }
+        },
+        [value]);
+
+    // gets called the first time only (empty deps array)
+    useEffect(() => {
+        console.log("first time only!!!");
+    }, []);
+
     console.log('Render component');
     return (<>
         <h1>{value}</h1>

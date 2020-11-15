@@ -18,6 +18,10 @@ Are from the initial part of the course and deal with basic stuff.
 React home page: [https://reactjs.org/](https://reactjs.org/)
 Facebook CRE: [https://github.com/facebook/create-react-app](https://github.com/facebook/create-react-app)
 
+JavaScript Tutorials:
+ - [The modern JavaScript tutorial](https://javascript.info/) - (see [here](https://github.com/javascript-tutorial/it.javascript.info#readme) to contribute a translation)
+ - Asynchronous programming: [https://javascript.info/async](https://javascript.info/async)
+
 ### Other material from John Smilga (https://www.johnsmilga.com/)
 
 [Javascript Nuggets](https://www.youtube.com/playlist?list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ)

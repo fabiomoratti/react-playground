@@ -13,9 +13,15 @@ const defaultState = {
     modalContent: ''
 }
 
+const initState = (defaultState) => {
+    console.log("initState", defaultState);
+    return defaultState;
+}
+
 const Index = () => {
     const [name, setName] = useState('');
-    const [state, dispatch] = useReducer(reducer, defaultState);
+    // the third argument - not mentioned in the course - is a function used to initialize the state.
+    const [state, dispatch] = useReducer(reducer, defaultState, initState);
 
     const handleSubmit = (e) => {
         e.preventDefault();

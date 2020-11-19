@@ -3,7 +3,7 @@ import {data} from '../../../data';
 // more components
 // fix - context api, redux (for more complex cases)
 
-const PersonContext = React.createContext();
+const PersonContext = React.createContext(undefined);
 // returns two components - Provider, Consumer
 
 
@@ -16,14 +16,19 @@ const ContextAPI = () => {
     };
     return (
         /* PersonContext.Provider wraps the root component, may wrap the whole application */
-        <PersonContext.Provider value={{removePerson}}>
-            <h3>prop drilling</h3>
-            <List people={people}/>
+        <PersonContext.Provider value={{removePerson, people}}>
+            <h3>Context API</h3>
+            <List/>
         </PersonContext.Provider>
     );
 };
 
-const List = ({people}) => {
+const List = () => {
+    const {people} = useContext(PersonContext);
+    // Alternative form without destructuring
+    // const contextData = useContext(PersonContext);
+    // contextData.people
+
     return (
         <>
             {people.map((person) => {

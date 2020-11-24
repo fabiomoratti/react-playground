@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import TemperatureInput from "./TemperatureInput";
 
 const Setup = () => {
-    const [temperature, setTemperature] = useState('32');
-    const [scale, setScale] = useState('c');
+    // const [temperature, setTemperature] = useState('32');
+    // const [scale, setScale] = useState('c');
+    const [state, setState] = useState({temperature: 32, scale:'c'});
 
     const toCelsius = (fahrenheit) => {
         console.log("toCelsius: ", fahrenheit);
@@ -28,18 +29,21 @@ const Setup = () => {
 
     const handleCelsiusChange = (temperature) => {
         console.log("handleCelsiusChange", temperature);
-        setScale('c');
-        setTemperature(temperature);
+        // setScale('c');
+        // setTemperature(temperature);
+        setState({...state, temperature:temperature, state:'c'});
     }
 
     const handleFahrenheitChange = (temperature) => {
         console.log("handleFahrenheitChange", temperature);
-        setScale('f');
-        setTemperature(temperature);
+        // setScale('f');
+        // setTemperature(temperature);
+        setState({...state, temperature:temperature, state:'f'});
+
     }
 
-    const celsius = scale === 'f' ? tryConvert(temperature, toCelsius) : temperature;
-    const fahrenheit = scale === 'c' ? tryConvert(temperature, toFahrenheit) : temperature;
+    const celsius = state.scale === 'f' ? tryConvert(state.temperature, toCelsius) : state.temperature;
+    const fahrenheit = state.scale === 'c' ? tryConvert(state.temperature, toFahrenheit) : state.temperature;
     return (
         <>
             <h1>Calculator</h1>

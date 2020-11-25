@@ -2,7 +2,7 @@ import React from 'react';
 import ProductCategoryRow from "./ProductCategoryRow";
 import ProductRow from "./ProductRow";
 
-const ProductTable = ({data}) => {
+const ProductTable = ({data, inStock, searchString}) => {
 
     return (
         <>
@@ -20,11 +20,13 @@ const ProductTable = ({data}) => {
                         .map((category) => {
                             return (
                                 <React.Fragment key={category}>
-                                    <li><ProductCategoryRow category='{category}'/></li>
+                                    <li><ProductCategoryRow category={category}/></li>
                                     <li>
                                         <ul>
                                             {data
                                                 .filter((item) => item.category === category)
+                                                .filter((item) => !inStock || item.stocked === true)
+                                                .filter((item) => item.name.includes(searchString))
                                                 .map((item) => {
                                                     return (
                                                         <li key={item.name}>

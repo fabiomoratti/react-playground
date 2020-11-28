@@ -25,6 +25,10 @@ const Index = () => {
         setCart(cart + 1);
     }, [cart]);
 
+    // const addToCart = () => {
+    //     setCart(cart + 1);
+    // };
+
     const mostExpensive = useMemo(() => calculateMostExpensive(products), [
         products,
     ]);
@@ -42,7 +46,7 @@ const Index = () => {
     );
 };
 
-const BigList = ({products, addToCart}) => {
+const BigList = React.memo(({products, addToCart}) => {
     useEffect(() => {
         console.log('big list called');
     });
@@ -59,7 +63,7 @@ const BigList = ({products, addToCart}) => {
             })}
         </section>
     );
-};
+});
 
 const SingleProduct = ({fields, addToCart}) => {
     useEffect(() => {

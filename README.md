@@ -5,7 +5,6 @@ at [Free Code Camp](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ).
 
 The initial version of the repo is practically a clone of [react-advanced-2020](https://github.com/john-smilga/react-advanced-2020).
 
-
 Note: the files: 
  - src/index-basic.js
  - src/index-basic.css
@@ -13,10 +12,13 @@ Note: the files:
  - src/books.js
 Are from the initial part of the course and deal with basic stuff.
 
+The files in the `prjs` directory are other tests and experiments not taken from the course.
+
 ## Documentation Links
 
 React home page: [https://reactjs.org/](https://reactjs.org/)
 Facebook CRE: [https://github.com/facebook/create-react-app](https://github.com/facebook/create-react-app)
+React Router: [https://reactrouter.com/web/guides/quick-start](https://reactrouter.com/web/guides/quick-start)
 
 JavaScript Tutorials:
  - [The modern JavaScript tutorial](https://javascript.info/) - (see [here](https://github.com/javascript-tutorial/it.javascript.info#readme) to contribute a translation)

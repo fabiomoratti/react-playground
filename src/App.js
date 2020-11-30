@@ -1,10 +1,11 @@
 import React from 'react'
-//import Setup from "./tutorial/12-memo-useMemo-useCallback/setup";
-import Home from './prjs/03-tabler-test'
+import ReactRouterSetup from './prjs/03-tabler-test'
 
 function App() {
     return (
-            <Home/>
+        <React.StrictMode>
+            <ReactRouterSetup/>
+        </React.StrictMode>
     )
 }
 

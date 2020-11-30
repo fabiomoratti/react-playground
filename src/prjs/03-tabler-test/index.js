@@ -1,22 +1,35 @@
-import React from 'react';
-import "tabler-react/dist/Tabler.css";
-import { Card, Button } from "tabler-react";
+import React from 'react'
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch
+} from 'react-router-dom';
 
-const Home = () => {
+import "tabler-react/dist/Tabler.css";
+
+import {
+    HomePage,
+    LoginPage,
+    DetailsPage,
+    InsertPage,
+    ErrorPage,
+    Error404Page
+} from "./pages";
+
+const ReactRouterSetup = () => {
 
     return (
-        <>
-            <h1>Hello world</h1>
-            <Card>
-                <Card.Header>
-                    <Card.Title>Card Title</Card.Title>
-                </Card.Header>
-                <Card.Body>
-                    <Button color="primary">A Button</Button>
-                </Card.Body>
-            </Card>
-        </>
+        <Router>
+            <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route exact path="/login" component={LoginPage} />
+                <Route exact path="/detail" component={DetailsPage} />
+                <Route exact path="/insert" component={InsertPage} />
+                <Route exact path="/error" component={ErrorPage} />
+                <Route component={Error404Page} />
+            </Switch>
+        </Router>
     );
 }
 
-export default Home;
+export default ReactRouterSetup;

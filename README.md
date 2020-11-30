@@ -24,6 +24,16 @@ JavaScript Tutorials:
  - [The modern JavaScript tutorial](https://javascript.info/) - (see [here](https://github.com/javascript-tutorial/it.javascript.info#readme) to contribute a translation)
  - Asynchronous programming: [https://javascript.info/async](https://javascript.info/async)
 
+## UI Toolkits 
+
+### Tabler React
+Tabler is a free UI toolkit ([https://tabler.io/](https://tabler.io/)) with a React version.
+Relevant documentation to use Tabler React:
+
+ * [Demo site](http://tabler-react.com/)
+ * [Components Documentation](http://tabler-react.com/documentation/)
+ * [GitHub Repo](https://github.com/tabler/tabler-react) - see the `example` folder for details.
+ 
 ### Other material from John Smilga (https://www.johnsmilga.com/)
 
 [Javascript Nuggets](https://www.youtube.com/playlist?list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ)
